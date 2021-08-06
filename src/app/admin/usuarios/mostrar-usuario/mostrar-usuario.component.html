@@ -1,0 +1,19 @@
+<div class="usuarioDetalhes">
+    <h2>Usuário Detalhes</h2>
+    <table>
+        <tr>
+            <td>Usuário Id</td>
+            <td>{{ usuario.id}}</td>
+        </tr>
+        <tr>
+            <td>Usuário Nome</td>
+            <td>{{usuario.nome}}</td>
+        </tr>
+        <tr>
+            <td>Usuário Tipo</td>
+            <td>{{usuario.tipo}}</td>
+        </tr>
+    </table>
+    <br>
+    <a class="btn btn-small btn-danger" (click)="deletarUsuario()">Excluir</a>
+</div>
