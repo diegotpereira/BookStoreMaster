@@ -1,0 +1,18 @@
+<h1>Novo Livro</h1>
+<form>
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" placeholder="Nome do Livro" [(ngModel)]="livro.nome" name="nome">
+
+    <label for="autor">Autor</label>
+    <input type="text" class="form-control" id="autor" placeholder="autor..." name="autor" [(ngModel)]="livro.autor">
+
+    <label for="preco">Preço</label>
+    <input type="text" class="form-control" id="preco" placeholder="preco" name="preco" [ngModel]="livro.preco">
+
+    <br>
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="200" width="200" *ngIf="imgURL">
+
+    <br>
+    <button type="button" class="btn btn-success" (click)="salvarLivro()">Salvar</button>
+</form>

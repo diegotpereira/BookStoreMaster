@@ -1,0 +1,15 @@
+<h1>Novo Usuário</h1>
+<form #recebeUsuario="ngForm">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" placeholder="nome de usuário" [(ngModel)]="usuario.nome" name="nome">
+
+    <label for="tipo">Tipo</label>
+    <input type="text" class="form-control" id="tipo" placeholder="tipo..." [(ngModel)]="usuario.tipo" name="tipo">
+
+    <label for="password">Senha</label>
+    <input type="password" class="form-control" id="password" placeholder="senha..." [(ngModel)]="usuario.password" name="password">
+
+    <br>
+
+    <button type="button" class="btn btn-success" (click)="addUsuario()">Salvar</button>
+</form>
