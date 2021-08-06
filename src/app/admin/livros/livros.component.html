@@ -1,0 +1,27 @@
+<h1>Livros Admin</h1>
+<a class="btn btn-primary mb-3" (click)="addLivro()">Novo Livro</a>
+<div class="container row">
+    <div class="col-md-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Livro</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let livro of livros">
+                    <td>{{livro.id}}</td>
+                    <td>{{livro.nome}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="setLivro(livro.id)">Mostrar Detalhes</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-md-6">
+            <app-add-livro *ngIf="acao === 'add'" [livro]="selecionarLivro"></app-add-livro>
+        </div>
+    </div>
+</div>
