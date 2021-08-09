@@ -12,6 +12,8 @@ import { AddUsuarioComponent } from './admin/usuarios/add-usuario/add-usuario.co
 import { MostrarUsuarioComponent } from './admin/usuarios/mostrar-usuario/mostrar-usuario.component';
 import { LivrosComponent } from './admin/livros/livros.component';
 import { AddLivroComponent } from './admin/livros/add-livro/add-livro.component';
+import { MostrarLivroComponent } from './admin/livros/mostrar-livro/mostrar-livro.component';
+import { LojaLivroComponent } from './loja-livro/loja-livro.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AddLivroComponent } from './admin/livros/add-livro/add-livro.component'
     AddUsuarioComponent,
     MostrarUsuarioComponent,
     LivrosComponent,
-    AddLivroComponent
+    AddLivroComponent,
+    MostrarLivroComponent,
+    LojaLivroComponent
   ],
   imports: [
     BrowserModule,
