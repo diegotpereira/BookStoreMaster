@@ -27,6 +27,14 @@ export class HttpClientService {
   }
 
   addLivro(novoLivro: Livro) {
-    return this.httpClient.post<Livro>
+    return this.httpClient.post<Livro>('http://localhost:8080/livros/add', novoLivro);
+  }
+
+  deletarLivro(id) {
+    return this.httpClient.delete<Livro>('http://localhost:8080/livros/' + id);
+  }
+
+  atualizarLivro(atualizarLivro: Livro) {
+    return this.httpClient.put<Livro>('http://localhost:8080/livros/update', atualizarLivro);
   }
 }

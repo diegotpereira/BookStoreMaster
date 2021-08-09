@@ -4,4 +4,6 @@ export class Livro {
     autor: string;
     preco: number;
     picByte: string;
+    imagemRecuperada: string;
+    estaAdicionado: boolean;
 }
