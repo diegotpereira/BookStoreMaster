@@ -1,0 +1,56 @@
+<div class="container row">
+    <div class="col-md-2">
+        <h1>Livros</h1>
+    </div>
+    <div class="col-md-10 custom-products-cart-container">
+        <div class="offset-md-8">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <br>
+                    <a href="#" class="btn btn-info btn-lg" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="fa fa-shopping-cart">
+                            Livros adicionados ao carrinho:
+                        </span>
+                        <span class="caret">{{carrinhoLivros.length}}</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-cart" role="menu">
+                        <li *ngFor="let item of carrinhoLivros">
+                            <div class="item product-cart-item row">
+                                <div class="col-md-8" *ngIf="item">{{item.nome</div>
+                                <div class="col-md-4" *ngIf="item"><strong>R${{item.preco}}</strong></div>
+                            </div>
+                        </li>
+                        <hr>
+                        <li><a class="btn btn-small btn-success" role="button" (click)="irParaCarrinho()">Mostrar Livro</a></li>
+                        <br>
+                        <li *ngIf="carrinhoLivros.length > 0">
+                            <a class="btn btn-small btn-warning" role="button" (click)="carrinhoVazio()">Carrinho Vazio</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- <hr>
+<hr> -->
+
+<div class="container row">
+    <div class="col-md-4" *ngFor="let livro of livros; let i = index">
+        <div class="card card-block">
+            <img class="custom-image-style" img src="{{livro.imagemRecuperada}}" height="300" width="200" style="margin-left: 60px; margin-top: 10px">
+            <div class="book-desc-container row">
+                <div>
+                    <p style="margin-left: 60px"><strong>{{livro.nome}}: R${{livro.preco}}</strong></p>
+                    <p style="margin-left: 60px">{{livro.autor}}</p>
+                </div>
+                <div class="offset-md-4 col-md-4">
+                    <button class="btn btn-primary btn-sm" (click)="adicionarAoCarrinho(livro.id)" [disabled]="livro.estaAdicionado === true">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
