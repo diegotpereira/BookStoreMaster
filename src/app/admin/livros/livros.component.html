@@ -15,13 +15,14 @@
                     <td>{{livro.id}}</td>
                     <td>{{livro.nome}}</td>
                     <td>
-                        <button type="button" class="btn btn-primary" (click)="setLivro(livro.id)">Mostrar Detalhes</button>
+                        <button type="button" class="btn btn-primary" (click)="mostrarLivro(livro.id)">Mostrar Detalhes</button>
                     </td>
                 </tr>
             </tbody>
         </table>
         <div class="col-md-6">
-            <app-add-livro *ngIf="acao === 'add'" [livro]="selecionarLivro"></app-add-livro>
+            <app-add-livro *ngIf="acao === 'add' || acao === 'edit'" [livro]="selecionarLivro" (livroAddEvent)="refreshData()"></app-add-livro>
+            <app-mostrar-livro *ngIf="acao === 'mostrar'" [livro]="selecionarLivro" (livroDeletarEvent)="refreshData()"></app-mostrar-livro>
         </div>
     </div>
 </div>
