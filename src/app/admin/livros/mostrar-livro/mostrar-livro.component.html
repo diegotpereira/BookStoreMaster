@@ -1,0 +1,23 @@
+<div class="livroDetalhes">
+    <h1>Detalhes do Livro</h1>
+
+<table>
+    <tr>
+        <td>Livro id</td>
+        <td>{{livro.id}}</td>
+    </tr>
+    <tr>
+        <td>Livro Autor</td>
+        <td>{{livro.autor}}</td>
+    </tr>
+    <tr>
+        <td>Livro Preço</td>
+        <td>{{livro.preco}}</td>
+    </tr>
+</table>
+<br>
+<img [src]=(livro.imagemRecuperada) height="200" width="200">
+<br><br>
+<a class="btn btn-small btn-warning" (click)="editLivro()">Editar</a> 
+<a class="btn btn-small btn-danger"  (click)="deletarLivro()">Excluir</a>
+</div>
